@@ -6,7 +6,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        'irish-grover': ["'Irish Grover'", ...fontFamily.sans],
+      },
+      colors: {
+        Verde: "#348140",
+        Vermelho: "#A43131",
+        MarromClarinho: "#E1DFD7",
+        Cinza: "#747474",
       },
     },
   },
