@@ -81,10 +81,15 @@ describe("Receveid Model", () => {
   });
 
   it("Deve falhar ao criar Receveid com userId não existente", async () => {
+    const createdUser = await db.user.create({
+      data: {
+        email: "fourthuser@gmail.com",
+      },
+    });
     const createdDonate = await db.donate.create({
       data: {
         description: "Doação para teste de userId",
-        userId: "validUserId",
+        userId: createdUser.id,
       },
     });
 
