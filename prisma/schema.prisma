@@ -50,6 +50,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    donates       Donate[]
 }
 
 model VerificationToken {
@@ -58,4 +59,14 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+
+model Donate {
+    id String @id @default(cuid())
+    createdAt DateTime @default(now())
+    status String @default("a caminho")
+    description String
+    userId String
+    user User @relation(fields: [userId], references: [id])
 }
