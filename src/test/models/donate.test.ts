@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 
 const db = new PrismaClient();
 
@@ -28,14 +29,14 @@ describe("Donate Model", () => {
   it("Deve falhar ao criar uma doação sem o usuário", async () => {
     const invalidDonateData = {
       description: "Descrição de uma doação inválida",
-      userId: 20, // Nao existe este usuario
+      userId: "20", // Nao existe este usuario
     };
 
-    const notCreatedDonate = await db.donate.create({
-      data: { ...invalidDonateData },
-    });
-
-    expect(notCreatedDonate).toThrow();
+    await expect(
+      db.donate.create({
+        data: { ...invalidDonateData },
+      }),
+    ).rejects.toThrow(PrismaClientKnownRequestError); // Certifique-se de que o erro correto do Prisma está sendo capturado
   });
 
   it("Deve falhar ao ser passado ID repetido", async () => {
@@ -51,9 +52,10 @@ describe("Donate Model", () => {
     const createdDonate = await db.donate.create({
       data: { ...validDonateData },
     });
-    const repeteadDonate = await db.donate.create({
-      data: { ...validDonateData, id: createdDonate.id },
-    });
-    expect(repeteadDonate).toThrow();
+    await expect(
+      db.donate.create({
+        data: { ...validDonateData, id: createdDonate.id },
+      }),
+    ).rejects.toThrow(PrismaClientKnownRequestError);
   });
 });
