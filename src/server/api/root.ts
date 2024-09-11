@@ -114,7 +114,7 @@ export const appRouter = createTRPCRouter({
       .query(async ({ ctx, input }) => {
         const donate = await ctx.db.donate.findUnique({
           where: { id: input.id },
-          include: { Location: true },
+          include: { Location: true, Image: true },
         });
         return donate;
       }),

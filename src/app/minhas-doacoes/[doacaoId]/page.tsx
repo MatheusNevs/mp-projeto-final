@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { CloudImage } from "~/app/_components/cloud-image";
 import { MapComponent } from "~/app/_components/map";
 import { api, HydrateClient } from "~/trpc/server";
 
@@ -32,6 +33,13 @@ export default async function DoacaoPage({
             lng={donate.Location[lastLocationIndex]?.lng ?? undefined}
           />
         </div>
+        {donate.Image.map((image) => (
+          <CloudImage
+            key={image.id}
+            alt="imagem da doacao"
+            src={image.publicId}
+          />
+        ))}
       </main>
     </HydrateClient>
   );
