@@ -1,0 +1,53 @@
+﻿04/08 - 58min
+Atividade: Design do Front End
+Descrição: Concepção do design da interface no Figma, priorizando uma experiência de usuário simplificada e atrativa. A meta era garantir que o fluxo de navegação inicial fosse intuitivo.
+________________
+
+
+05/09 - 2h 10min
+Atividade: Capacitação técnica
+Descrição: Estudo de tecnologias fundamentais para o projeto (TypeScript e Jest). Investimos nesse aprendizado para garantir uma entrega técnica robusta e consistente com as melhores práticas.
+________________
+
+
+05/09 - 56min
+Atividade: Planejamento e Gerenciamento
+Descrição: Reunião com a equipe para discutir o roadmap e dividir as tarefas. O foco foi garantir alinhamento e clareza nas entregas do projeto.
+________________
+
+
+06/09 - 2h 22min
+Atividade: Integração de Funcionalidades
+Descrição: Reunião de integração dos módulos de login e cadastro, visando uma experiência contínua para o usuário. 
+________________
+07/09 - 1h 47min
+Atividade: Planejamento de Prioridades
+Descrição: Reunião com a equipe para definir os próximos passos no desenvolvimento do Front End, sempre priorizando as funcionalidades que trazem maior valor ao usuário.
+________________
+
+
+08/09 - 24min
+Atividade: Resolução de Bugs
+Descrição: Correção de um bug na página de doação relacionado à seleção de instituições, removendo um obstáculo crítico na experiência do usuário.
+________________
+
+
+09/09 - 1h 21min
+Atividade: Desenvolvimento do Modal de Doação
+Descrição: Implementação do modal de doação, um componente essencial para garantir um processo rápido e intuitivo para o usuário, alinhado com os objetivos de facilitar o ato de doar.
+________________
+
+
+10/09 -1h e 24min
+Atividade: Validação de Usabilidade
+Descrição: Realização de testes de usabilidade com um grupo de usuários para validar o fluxo da interface e identificar pontos de melhoria. O objetivo foi garantir que o site de doações esteja funcionando de maneira intuitiva e fácil de usar.
+________________
+
+
+________________
+
+
+11/09 - 24min
+Atividade: Revisão do Backlog e Refinamento de Requisitos
+Descrição: Revisão do backlog com a equipe para priorizar novas funcionalidades e refinar os requisitos das próximas sprints. O foco foi garantir que as entregas futuras estejam alinhadas com os objetivos de impacto do projeto e com as expectativas dos stakeholders.
+________________
