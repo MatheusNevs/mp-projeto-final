@@ -12,6 +12,8 @@ import {
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
+import { useToast } from "~/hooks/use-toast";
+import { api } from "~/trpc/react";
 
 const formSchema = z.object({
   description: z.string().min(5, {
@@ -20,11 +22,14 @@ const formSchema = z.object({
   images: z
     .any()
     .refine((files) => files instanceof FileList && files.length > 0, {
-      message: "Você deve selecionar pelo menos uma imagem.",
-    }),
+      message: "Verifique sua imagem",
+    })
+    .optional(),
 });
 
 export default function Donate() {
+  const { mutateAsync } = api.donate.createDonate.useMutation();
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,7 +38,21 @@ export default function Donate() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    mutateAsync(values)
+      .then(() => {
+        toast({
+          title: "Criado com sucesso!",
+          description: "doação criada com sucesso",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        toast({
+          title: "Erro ao criar doação",
+          description: "Não foi possível criar a doação",
+          variant: "destructive",
+        });
+      });
   }
 
   return (

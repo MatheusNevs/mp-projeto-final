@@ -6,6 +6,7 @@ import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Navbar } from "./_components/navbar";
 import { MapProvider } from "~/providers/map-provider";
+import { Toaster } from "~/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "DoeAgora",
@@ -21,8 +22,11 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${GeistSans.variable}`}>
       <body className="min-h-screen overflow-x-hidden antialiased">
         <MapProvider>
-          <Navbar />
-          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <TRPCReactProvider>
+            <Navbar />
+            {children}
+            <Toaster />
+          </TRPCReactProvider>
         </MapProvider>
       </body>
     </html>
