@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "~/components/ui/button";
 import { getServerAuthSession } from "~/server/auth";
+import { SignOutButton } from "./sign-out-button";
 
 export async function Navbar() {
   const session = await getServerAuthSession();
@@ -29,15 +30,27 @@ export async function Navbar() {
         </Link>
       )}
       {!!session?.user && (
-        <Link
-          href={"/doar"}
-          className={buttonVariants({
-            className: "hover:bg-opacity-80",
-            variant: "ghost",
-          })}
-        >
-          Fazer Doação
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href={"/minhas-doacoes"}
+            className={buttonVariants({
+              className: "hover:bg-opacity-80",
+              variant: "ghost",
+            })}
+          >
+            Minhas Doações
+          </Link>
+          <Link
+            href={"/doar"}
+            className={buttonVariants({
+              className: "hover:bg-opacity-80",
+              variant: "ghost",
+            })}
+          >
+            Fazer Doação
+          </Link>
+          <SignOutButton />
+        </div>
       )}
     </nav>
   );
