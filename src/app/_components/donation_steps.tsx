@@ -19,12 +19,12 @@ const steps = [
 
 const DonationSteps: React.FC = () => {
   return (
-    <div className="bg-MarromClarinho relative mx-auto mt-4 flex max-w-xl flex-col items-center justify-center rounded-2xl p-4 md:p-8">
+    <div className="relative mx-auto mt-4 flex max-w-xl flex-col items-center justify-center rounded-2xl bg-MarromClarinho p-4 md:p-8">
       <ol className="space-y-2 pl-2 text-center md:space-y-4">
         {steps.map((step, index) => (
           <li
             key={index}
-            className="text-Cinza flex items-center text-xs sm:text-sm md:text-lg"
+            className="flex items-center text-xs text-Cinza sm:text-sm md:text-lg"
           >
             {React.cloneElement(step.icon, {
               className: "text-Verde mr-2 md:mr-4 md:text-2xl",

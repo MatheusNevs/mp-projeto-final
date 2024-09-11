@@ -14,12 +14,22 @@ import {
 export const appRouter = createTRPCRouter({
   donate: {
     createDonate: protectedProcedure
-      .input(z.object({ description: z.string() }))
+      .input(
+        z.object({ description: z.string(), lat: z.number(), lng: z.number() }),
+      )
       .mutation(async ({ input, ctx }) => {
         const createdDonate = await ctx.db.donate.create({
           data: {
             description: input.description,
             userId: ctx.session.user.id,
+            Location: {
+              create: {
+                local: `latitude: ${input.lat}, longitude: ${input.lng}`,
+                lat: input.lat,
+                lng: input.lng,
+                user: { connect: { id: ctx.session.user.id } },
+              },
+            },
           },
         });
         return createdDonate;

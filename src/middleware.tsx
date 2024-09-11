@@ -4,7 +4,6 @@ export default function Middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const token = request.cookies.get("next-auth.session-token");
   const url = request.url;
-  console.log(pathname);
 
   if (pathname.startsWith("/login") && token) {
     return NextResponse.redirect(new URL("/", url));
