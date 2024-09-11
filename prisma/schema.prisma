@@ -72,6 +72,7 @@ model Donate {
   user        User       @relation(fields: [userId], references: [id])
   Receveid    Receveid[]
   Location    Location[]
+  Image       Image[]
 }
 
 model Receveid {
@@ -90,4 +91,11 @@ model Location {
   donateId String
   user     User   @relation(fields: [userId], references: [id])
   donate   Donate @relation(fields: [donateId], references: [id])
+}
+
+model Image {
+  id       String  @id @default(cuid())
+  donateId String
+  publicId String
+  donate   Donate? @relation(fields: [donateId], references: [id])
 }
