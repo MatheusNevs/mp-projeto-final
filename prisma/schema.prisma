@@ -52,6 +52,7 @@ model User {
   sessions      Session[]
   donates       Donate[]
   Receveid      Receveid[]
+  Location      Location[]
 }
 
 model VerificationToken {
@@ -70,6 +71,8 @@ model Donate {
   userId      String
   user        User       @relation(fields: [userId], references: [id])
   Receveid    Receveid[]
+  Location    Location[]
+  Image       Image[]
 }
 
 model Receveid {
@@ -79,4 +82,20 @@ model Receveid {
   donateId String @unique
   user     User   @relation(fields: [userId], references: [id])
   donate   Donate @relation(fields: [donateId], references: [id])
+}
+
+model Location {
+  id       String @id @default(cuid())
+  local    String
+  userId   String
+  donateId String
+  user     User   @relation(fields: [userId], references: [id])
+  donate   Donate @relation(fields: [donateId], references: [id])
+}
+
+model Image {
+  id       String  @id @default(cuid())
+  donateId String
+  publicId String
+  donate   Donate? @relation(fields: [donateId], references: [id])
 }
