@@ -7,7 +7,8 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: ["var(--font-geist-sans)", ...fontFamily.sans]
+  			sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        'irish-grover': ["'Irish Grover'", ...fontFamily.sans],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -54,7 +55,11 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+        Verde: "#348140",
+        Vermelho: "#A43131",
+        MarromClarinho: "#E1DFD7",
+        Cinza: "#747474",
   		}
   	}
   },
