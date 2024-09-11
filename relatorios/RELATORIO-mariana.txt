@@ -1,0 +1,7 @@
+Data   | Horas Trabalhadas | Tipo de Tarefa                             | Descrição da Tarefa
+-------|-------------------|--------------------------------------------|-------------------------------------------------------
+03/09  | 2h10m             | Estudo de ferramenta                       | Estudo da ferramenta T3 App utilizada no projeto.
+04/09  | 40m               | Organização de componentes                 | Separação dos componentes da página inicial com base no design do projeto (Figma). Componentes definidos: página principal, botões de login/doação e etapas de doação.
+08/09  | 1h20m             | Criação de branch e componentes            | Criação da branch "landingpage" e dos componentes da página inicial e botões de doação no VSCode. Identificação de bug relacionado à responsividade de imagem.
+09/09  | 1h15m             | Desenvolvimento de componente              | Implementação do componente de etapas de doação.
+10/09  | 3h                | Integração e correção de bugs              | Integração dos componentes na página principal e correção do bug de responsividade da imagem.
