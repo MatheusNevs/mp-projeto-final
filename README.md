@@ -1,29 +1,145 @@
-# Create T3 App
+# Projeto T3 - Stack com Next.js, TailwindCSS, Prisma, tRPC, Zod e Cloudinary
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Descrição
 
-## What's next? How do I make an app with this?
+Este é um projeto desenvolvido com a **Stack T3**, que combina tecnologias modernas para criar aplicações fullstack escaláveis. O projeto usa **Next.js** para o frontend e backend, com **TailwindCSS** para estilização. **Prisma** é usado para a ORM e gerenciamento de banco de dados, **tRPC** para comunicação eficiente entre frontend e backend, e **Zod** para validação de dados. As imagens são gerenciadas através da plataforma **Cloudinary**. O desenvolvimento segue a abordagem **Test-Driven Development (TDD)**, garantindo a qualidade do código com testes unitários e de integração através do frameworkd de teste **Jest**..
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Tecnologias Utilizadas
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **Next.js** - Framework React para renderização no lado do servidor (SSR) e geração de sites estáticos (SSG).
+- **TailwindCSS** - Framework utilitário para estilização.
+- **Prisma** - ORM para gerenciamento de banco de dados.
+- **tRPC** - RPC type-safe para comunicação entre cliente e servidor.
+- **Zod** - Biblioteca de validação e parsing de dados.
+- **Cloudinary** - Plataforma de gerenciamento e otimização de imagens.
+- **Jest** - Framework de testes para desenvolvimento orientado a testes (TDD).
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Funcionalidades
 
-## Learn More
+- Acompanhamento geográfica de doações feitas.
+- Criação e autenticação de usuários.
+- Upload e gerenciamento de imagens com Cloudinary.
+- API segura e validada com tRPC e Zod.
+- Conexão com banco de dados via Prisma.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Pré-requisitos
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Antes de começar, você precisará ter as seguintes ferramentas instaladas:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- [Node.js](https://nodejs.org/en/) (versão LTS recomendada)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install) ou [pnpm](https://pnpm.io/pt/)
+- Conta no [Cloudinary](https://cloudinary.com/) para gerenciamento de imagens
+- Banco de dados PostgreSQL/MySQL ou SQLite (configurável via Prisma)
 
-## How do I deploy this?
+## Variáveis de Ambiente
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis de ambiente:
+
+```bash
+DATABASE_URL="sua_url_do_banco_de_dados"
+CLOUDINARY_URL="sua_url_cloudinary"
+```
+
+## Instalação
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/MatheusNevs/mp-projeto-final
+```
+
+2. Navegue até o diretório do projeto:
+
+```bash
+cd nome-do-projeto
+```
+
+3. Instale as dependências:
+
+```bash
+yarn install
+```
+
+ou
+
+```bash
+pnpm install
+```
+
+4. Configure o Prisma para se conectar ao seu banco de dados:
+
+```bash
+npx prisma generate
+```
+
+5. Execute as migrações para criar as tabelas no banco de dados:
+
+```bash
+npx prisma migrate dev
+```
+
+## Desenvolvimento
+
+Para iniciar o ambiente de desenvolvimento, execute:
+
+```bash
+yarn dev
+```
+
+ou
+
+```bash
+pnpm run dev
+```
+
+O projeto será executado em `http://localhost:3000`.
+
+## Build
+
+Para compilar o projeto para produção, utilize:
+
+```bash
+yarn build
+```
+
+ou
+
+```bash
+pnpm run build
+```
+
+Isso gerará os arquivos otimizados na pasta `.next`.
+
+## Executando os Testes
+
+O projeto foi desenvolvido seguindo a abordagem **TDD**. Os testes se encontram na pasta `src/test`. Para rodar os testes:
+
+1. **Testes Unitários e de Integração:**
+
+   Execute os testes com:
+
+   ```bash
+   yarn test
+   ```
+
+   ou
+
+   ```bash
+   pnpm test
+   ```
+
+   Para executar os testes no modo observação, utilize:
+
+   ```bash
+   yarn test:watch
+   ```
+
+   ou
+
+   ```bash
+   pnpm run test:watch
+   ```
+
+## Licença
+
+Este projeto está licenciado sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
