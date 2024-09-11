@@ -19,12 +19,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${GeistSans.variable}`}>
-      <MapProvider>
-        <body className="min-h-screen overflow-x-hidden antialiased">
+      <body className="min-h-screen overflow-x-hidden antialiased">
+        <MapProvider>
           <Navbar />
           <TRPCReactProvider>{children}</TRPCReactProvider>
-        </body>
-      </MapProvider>
+        </MapProvider>
+      </body>
     </html>
   );
 }

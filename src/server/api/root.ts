@@ -32,6 +32,16 @@ export const appRouter = createTRPCRouter({
       });
       return donates;
     }),
+    getDonate: publicProcedure
+      .input(z.object({ id: z.string() }))
+      .query(async ({ ctx, input }) => {
+        const donate = await ctx.db.donate.findUnique({
+          where: { id: input.id },
+          include: { Location: true },
+        });
+
+        return donate;
+      }),
   },
   image: {
     createImage: protectedProcedure

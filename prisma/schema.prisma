@@ -87,6 +87,8 @@ model Receveid {
 model Location {
   id       String @id @default(cuid())
   local    String
+  lat      Int?
+  lng      Int?
   userId   String
   donateId String
   user     User   @relation(fields: [userId], references: [id])
