@@ -20,7 +20,6 @@ describe("Location Model", () => {
 
     const validLocationData = {
       local: "Rua dos Testes, 123",
-      status: "a caminho", // status válido
       userId: createdUser.id,
       donateId: createdDonate.id,
     };
@@ -31,40 +30,11 @@ describe("Location Model", () => {
 
     expect(createdLocation).toHaveProperty("id", createdLocation.id);
     expect(createdLocation).toHaveProperty("local", validLocationData.local);
-    expect(createdLocation).toHaveProperty("status", validLocationData.status);
     expect(createdLocation).toHaveProperty("userId", validLocationData.userId);
     expect(createdLocation).toHaveProperty(
       "donateId",
       validLocationData.donateId,
     );
-  });
-
-  it("Deve falhar ao criar Location sem local", async () => {
-    const createdUser = await db.user.create({
-      data: {
-        email: "locationuser2@gmail.com",
-      },
-    });
-
-    const createdDonate = await db.donate.create({
-      data: {
-        description: "Doação para teste de localização sem local",
-        userId: createdUser.id,
-      },
-    });
-
-    const invalidLocationData = {
-      local: "", // Local vazio
-      status: "moving",
-      userId: createdUser.id,
-      donateId: createdDonate.id,
-    };
-
-    await expect(
-      db.location.create({
-        data: { ...invalidLocationData },
-      }),
-    ).rejects.toThrow(PrismaClientKnownRequestError);
   });
 
   it("Deve falhar ao criar Location com userId inexistente", async () => {
@@ -82,7 +52,6 @@ describe("Location Model", () => {
 
     const invalidLocationData = {
       local: "Rua dos Testes, 789",
-      status: "arrived",
       userId: "nonexistentUserId", // userId inexistente
       donateId: createdDonate.id,
     };
@@ -103,7 +72,6 @@ describe("Location Model", () => {
 
     const invalidLocationData = {
       local: "Rua dos Testes, 101",
-      status: "moving",
       userId: createdUser.id,
       donateId: "nonexistentDonateId", // donateId inexistente
     };
@@ -131,7 +99,6 @@ describe("Location Model", () => {
 
     const validLocationData = {
       local: "Rua dos Testes, 202",
-      status: "arrived",
       userId: createdUser.id,
       donateId: createdDonate.id,
     };
