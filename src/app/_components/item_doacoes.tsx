@@ -31,7 +31,7 @@ export function ItemDoacao({
         <h2 className={`text-md mb-2 font-irish-grover`}>{doacao.status}</h2>
         <h2 className="text-md font-irish-grover">Momento da Criação</h2>
         <h2 className="text-md mb-2 font-irish-grover text-[#348140]">
-          {doacao.createdAt?.toLocaleTimeString()}
+          {doacao.createdAt?.toLocaleString()}
         </h2>
         <h2 className="text-md font-irish-grover">Descrição da Doação</h2>
         <p className="text-md mb-3 font-irish-grover text-[rgba(0,0,0,0.5)]">
