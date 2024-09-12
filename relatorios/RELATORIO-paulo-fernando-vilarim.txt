@@ -2,5 +2,6 @@ Data   | Horas Trabalhadas | Tipo de Tarefa                             | Descri
 -------|-------------------|--------------------------------------------|-------------------------------------------------------
 02/09  | 2h30m             | Organização sprint 1                       | Organização de issues no GitHub Projects e reunião para alinhamento pra sprint 1
 08/09  | 1h                | Revisão de código                          | Revisão de código realizado no back e no front
-09/09  | 1h30m             | Alinhamento sprint 2                       | Sprint review e auxílio a devs
-11/09  | 6h30m             | Integração e revisão                       | Integração entre as partes do codigo (back, front e componentes do front) e revisão de código realizado
+09/09  | 1h30m             | Alinhamento sprint 2                       | Sprint review e acompanhamento devs
+11/09  | 6h                | Integração e revisão                       | Integração entre as partes do codigo (comunicacao back e front, navegacao entre
+                                                                          paginas do front) e revisão/correcao de código realizado
