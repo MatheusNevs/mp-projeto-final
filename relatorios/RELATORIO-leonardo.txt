@@ -1,0 +1,9 @@
+Data   | Horas Trabalhadas | Tipo de Tarefa                             | Descrição da Tarefa
+-------|-------------------|--------------------------------------------|-------------------------------------------------------
+05/09  | 1h                | Estudar aulas e lab. relacionados          | Estudo de historietas, assertivas e tabelas de decisão
+05/09  | 1h                | Especificar os módulos e funções           | Definição da estrutura do sistema
+06/09  | 3h                | Projetar                                   | Design no figma
+08/09  | 1h15min           | Gerenciar a construção do software         | Atribuição de tarefas
+10/09  | 3h                | Codificar módulo                           | Desenvolvimento da tela de doações
+11/09  | 1h                | Codificar módulo                           | Ajustes no frontend
+11/09  | 1h                | Revisar projetos                           | Revisão do código
