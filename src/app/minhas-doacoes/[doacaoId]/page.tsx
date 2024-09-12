@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { CloudImage } from "~/app/_components/cloud-image";
 import { MapComponent } from "~/app/_components/map";
+import { Button } from "~/components/ui/button";
 import { api, HydrateClient } from "~/trpc/server";
 
 export default async function DoacaoPage({
@@ -26,6 +27,10 @@ export default async function DoacaoPage({
             <span className="font-semibold">Momento de Criação: </span>
             {donate.createdAt.toLocaleString()}
           </li>
+          <li>
+            <span className="font-semibold">Status: </span>
+            {donate.status}
+          </li>
         </ul>
         <div className="size-96">
           <MapComponent
@@ -40,6 +45,9 @@ export default async function DoacaoPage({
             src={image.publicId}
           />
         ))}
+        <form className="my-2">
+          <Button>Atualizar para entregue</Button>
+        </form>
       </main>
     </HydrateClient>
   );
