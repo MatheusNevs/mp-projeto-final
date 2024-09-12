@@ -1,0 +1,16 @@
+Data | Horas Trabalhadas | Tipo Tarefa | Descrição da Tarefa Realizada
+
+08/09 | 2h 10min | Projetar | Ajustes no design da tela de doações no Figma
+Realizei ajustes no design da tela de doações no Figma, focando na organização visual dos elementos para facilitar a interação do usuário, garantindo consistência com o restante do projeto.
+
+09/09 | 1h 30min | Estudar tecnologias | Estudo das tecnologias utilizadas no desenvolvimento Front End (TypeScript, Tailwind CSS e integração de mapas)
+Realizei estudos focados nas tecnologias necessárias para o desenvolvimento do Front End, como TypeScript, Tailwind CSS e bibliotecas para a implementação de mapas interativos. Esses estudos foram essenciais para a implementação da tela de doações e do mapa de acompanhamento.
+
+09/09 | 2h 35min | Codificar módulo | Implementação inicial da tela de doações sem integração com API's
+Iniciei a implementação da tela de doações no Front End, criando os formulários e organizando a estrutura de acordo com o design feito no Figma. Validações básicas foram implementadas, mas ainda sem integração com as APIs.
+
+10/09 | 1h 50min | Revisar código do módulo | Revisão do código e ajustes visuais na tela de doações
+Revisei o código da tela de doações, corrigindo bugs e fazendo ajustes no layout para garantir responsividade em dispositivos móveis.
+
+11/09 | 1h 30min | Codificar módulo | Implementação de mapa para acompanhar as doações
+Implementei um mapa interativo na tela de doações, permitindo que o usuário acompanhe as doações realizadas. O mapa foi integrado à interface sem a conexão com APIs externas, mas já está preparado para futura integração.
