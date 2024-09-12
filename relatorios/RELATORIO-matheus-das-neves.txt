@@ -1,9 +1,8 @@
 Data | Horas Trabalhadas | Tipo Tarefa | Descrição da Tarefa Realizada
 
-12/09        | 15m   | Especificar os módulos | Especificar e definir backlog do projeto em módulos para distribuição e organização das issues entre os membros, além de maior clareza sobre o projeto.
-12/09        | 15m   | Especificar as funções | Esquematização tanto do banco de dados usados quanto das funções para sua manipulação.
-12/09        | 20m   | Fazer diagramas        | Diagramas do back-end, relacionados ao banco de dados e api necessários ao front-end.
-12/09        | 30m   | Projetar               | Pensar e projetar estrutura do projeto, estrutura de páginas e do sistema para supri-lás.
+02/09        | 30m   | Especificar bd         | Esquematização tanto do banco de dados usados quanto das funções para sua manipulação.
+02/09        | 20m   | Fazer diagramas        | Diagramas do back-end, relacionados ao banco de dados e à api.
+02/09        | 30m   | Projetar               | Pensar e projetar estrutura do projeto, estrutura de páginas e do sistema para supri-lás.
 09/09 - 11/09| 3h    | Redigir casos de teste | Elaboração dos testes relacionados ao back-end, testando casos de criação de instâncias do banco de dados e casos de uso da api.
 09/09 - 11/09| 30m   | Revisar casos de teste | Possíveis alterações e revisões de acordo com o andamento do projeto nos testes criados.
 09/09 - 11/09| 20m   | Realizar os testes     | Execução dos testes juntamente ao desenvolvimento do projeto seguindo o TDD.
