@@ -1,0 +1,16 @@
+Data | Horas Trabalhadas | Tipo Tarefa | Descrição da Tarefa Realizada
+
+08/09 | 2h 10min | Projetar | Ajustes no design da tela de login no Figma
+Realizei ajustes no design da tela de login no Figma, refinando os detalhes visuais e discutindo com a equipe sobre possíveis melhorias na usabilidade e na experiência do usuário.
+
+08/09 | 2h 06min | Estudar aulas e laboratórios relacionados | Acompanhamento de aulas no YouTube recomendadas por colegas para entender TypeScript e TailWind CSS
+Estudei aulas de vídeo e materiais recomendados, focando nas tecnologias usadas para desenvolver o Front End do projeto (TypeScript e Tailwind CSS). Esses conteúdos ajudaram a otimizar o desenvolvimento da tela de login.
+
+09/09 | 2h 35min | Codificar módulo | Implementação da tela de login sem integração com API's
+Continuei a implementação da tela de login, adicionando validações básicas de formulário e garantindo a funcionalidade da interface sem a integração com APIs ainda.
+
+10/09 | 1h 50min | Revisar código do módulo | Revisão do código da tela de login e ajustes visuais
+Revisei o código da tela de login, focando em identificar e corrigir pequenos bugs visuais, além de melhorar a estruturação do código seguindo as melhores práticas de Tailwind CSS.
+
+11/09 | 1h 30min | Codificar módulo | Implementação de melhorias de usabilidade na tela de login
+Implementei melhorias de usabilidade na tela de login, ajustando a acessibilidade dos elementos e garantindo uma melhor experiência do usuário durante a navegação e o preenchimento do formulário.
